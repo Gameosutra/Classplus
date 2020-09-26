@@ -1,12 +1,12 @@
 .classes {
-  margin-left: 10%;
+  margin-left: 0%;
 }
 
 ul {
   font-family: monospace;
   font-size: 20px;
   list-style: unset;
-  margin: 2em;
+  margin: 5%;
   padding: 0;
   width: 60%;
 }
@@ -35,7 +35,7 @@ button:hover {
 li {
   margin: 0;
   margin-bottom: 1em;
-  padding-left: 1.5em;
+  padding-left: 0;
   position: relative;
 }
 
@@ -60,4 +60,23 @@ li {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+@media (min-width: 600px) {
+  .classes {
+    margin-left: 10%;
+  }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    padding: 5%;
+  }
+  ul {
+    font-family: monospace;
+    font-size: 20px;
+    list-style: unset;
+    margin: 2em;
+    padding: 0;
+    width: 60%;
+  }
 }
