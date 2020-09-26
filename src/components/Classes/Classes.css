@@ -11,6 +11,11 @@ ul {
   width: 60%;
 }
 
+.ListItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 button {
   background-color: lightgray;
   border: none;
@@ -78,5 +83,8 @@ li {
     margin: 2em;
     padding: 0;
     width: 60%;
+  }
+  .ListItems {
+    flex-wrap: nowrap;
   }
 }
