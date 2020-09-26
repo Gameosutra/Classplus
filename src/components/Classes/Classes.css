@@ -1,0 +1,63 @@
+.classes {
+  margin-left: 10%;
+}
+
+ul {
+  font-family: monospace;
+  font-size: 20px;
+  list-style: unset;
+  margin: 2em;
+  padding: 0;
+  width: 60%;
+}
+
+button {
+  background-color: lightgray;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 14px 40px;
+  border-radius: 5px;
+}
+button:hover {
+  color: black;
+}
+.text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+li {
+  margin: 0;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding: 5%;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
