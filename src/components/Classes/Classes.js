@@ -13,7 +13,7 @@ const classes = (props) => {
                   return (
                     <li key={index}>
                       Section: {secondItem}
-                      <div style={{ display: 'flex' }}>
+                      <div className="ListItems">
                         {props.classes[key][secondItem].map(thirdItem => {
                           return (
                             <div key={thirdItem.rollNumber} className="tooltip">
