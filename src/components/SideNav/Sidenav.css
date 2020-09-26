@@ -2,6 +2,9 @@
     width: 40%;
     background-color: aliceblue;
     box-shadow: -10px 0px 10px 1px #aaaaaa;
+    position: fixed;
+    z-index: 1;
+    padding: 4%
   }
 
   #slide {
@@ -21,5 +24,11 @@
   @keyframes slide {
     100% {
       right: 0;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .sidenav {
+      padding: 0%
     }
   }
