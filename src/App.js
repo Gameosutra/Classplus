@@ -3,6 +3,8 @@ import './App.css';
 import axios from 'axios';
 import Classes from './components/Classes/Classes';
 import Sidenav from './components/SideNav/Sidenav';
+import Loader from './assets/loader.gif';
+
 
 class App extends Component {
 
@@ -11,7 +13,8 @@ class App extends Component {
     this.state = {
       classes: [],
       sidebarOpen: false,
-      itemDetails: {}
+      itemDetails: {},
+      loader: false
     }
   }
 
@@ -21,6 +24,7 @@ class App extends Component {
 
   
   fetchResults = () => {
+    this.setState({ loader: true });
     axios({
       method: 'GET',
       url: 'https://student-management-api-1u3cd4j7s.now.sh/students'
@@ -32,7 +36,8 @@ class App extends Component {
         return classes;
       }, {});
       this.setState({
-        classes: finalList
+        classes: finalList,
+        loader: false
       })
     })
       .catch(error => {
@@ -49,6 +54,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      {this.state.loader ? <img src={Loader} alt="loader" className="loader"></img> : null}
         <Classes classes={this.state.classes} itemDetails = {this.state.itemDetails} handleNav={this.sideNavHandler} />
         {this.state.sidebarOpen ? 
           <Sidenav itemDetails = {this.state.itemDetails} handleNav={this.sideNavHandler} />
